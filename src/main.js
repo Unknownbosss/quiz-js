@@ -1,6 +1,6 @@
 import { view, game } from './quiz.js';
 
-const url = '../dist/question.json';
+const url = './question.json';
 
 fetch(url)
   .then(response => response.json())
