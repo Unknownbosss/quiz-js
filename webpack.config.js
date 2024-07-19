@@ -15,9 +15,8 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                }
+                use: 'babel-loader',
+
             }
         ]
     },
@@ -25,7 +24,10 @@ module.exports = {
     optimization: {
         minimize: true,
         minimizer: [
-            new TerserPlugin(),
+            new TerserPlugin({
+                parallel: true,
+                extractComments: false
+            }),
         ],
     },
 
