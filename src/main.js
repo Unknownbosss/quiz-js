@@ -1,6 +1,6 @@
 import { view, game } from './quiz.js';
 
-const url = './question.json';
+const url = 'https://spbooks.github.io/jsninja2/questions.json';
 
 fetch(url)
   .then(response => response.json())
